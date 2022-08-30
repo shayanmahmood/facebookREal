@@ -1,0 +1,300 @@
+/*amporting font from google font ==>*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/*amporting font from google font <==*/
+
+/*making roots for variables ==>*/
+:root {
+  --body-font: "Roboto", sans-serif;
+  --transition-normal: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+/*making roots for variables <==*/
+
+/*universal styling ==> */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*universal styling <== */
+
+/*body styling ==> */
+body {
+  background-color: #18191a;
+  overflow: hidden;
+  font-family: var(--body-font);
+}
+/*body styling <== */
+
+/**** header ****/
+
+/*header-basic-styling ==>*/
+.header {
+  width: 100vw;
+  height: 60px;
+  max-height: 80px;
+  background-color: #242526;
+}
+/*header-basic-styling <==*/
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+/*** header search ***/
+
+/*header search contaier styles ==>*/
+.header-search-container {
+  width: 300px;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1130px) {
+  .header-search-container {
+    justify-content: flex-start;
+  }
+}
+/*header search contaier styles <==*/
+
+/*header search immg styles ==>*/
+.header-search-img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  margin: 0 10px 0 10px;
+}
+/*header search img styles <==*/
+
+/*header search icon styling ==>*/
+.header-search-icon {
+  font-size: 16px !important;
+  color: #a7b1ac;
+  position: absolute;
+  margin-left: 75px;
+}
+.header-hidden-icon {
+  font-size: 30px !important;
+  color: #a7b1ac;
+  position: absolute;
+  display: none;
+  visibility: hidden;
+}
+@media only screen and (max-width: 650px) {
+  .header-hidden-icon {
+    visibility: visible;
+    margin-left: 120px;
+  }
+}
+@media only screen and (max-width: 1130px) {
+  .header-search-icon {
+    margin-left: 72px;
+    margin-top: 3px;
+  }
+}
+/*header search icon styling <==*/
+
+/*header search input or search box styling ==>*/
+.header-search-searchBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3a3b3c;
+  height: 43px;
+  width: 230px;
+  outline: none;
+  border: none;
+  padding: 20px;
+  padding-left: 40px;
+  color: #e4e6eb;
+  font-size: 15px;
+  border-radius: 25px;
+  margin-right: 8px;
+}
+@media only screen and (max-width: 1130px) {
+  .header-search-searchBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3a3b3c;
+    height: 40px;
+    width: 40px;
+    outline: none;
+    border: none;
+    padding: 20px;
+    /* padding-left: 40px; */
+    color: #e4e6eb;
+    font-size: 15px;
+    border-radius: 25px;
+    margin-right: 8px;
+  }
+}
+.header-search-searchBox::placeholder {
+  color: #a7b1ac;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+}
+/*header search input or search box styling <==*/
+
+/*** header search ***/
+
+/*** header nav ***/
+/*header nav main container styling ==>*/
+.header-nav-container {
+  width: 579px;
+  margin-right: 103px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/*header nav main container styling <==*/
+
+/*header nav container styling ==>*/
+.header-nav-icon-box {
+  border-radius: 10px;
+  width: 17.5%;
+  height: 47px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+  transition: var(--transition-normal);
+  position: relative;
+}
+
+/*header nav container with active line  ==>*/
+.activeBox:hover {
+  background: transparent !important;
+}
+.activeBox::before {
+  content: " ";
+  background-color: #2374e1;
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  align-self: flex-end;
+  justify-self: flex-end;
+  top: 100%;
+}
+/*header nav container with active line  <==*/
+
+/*header nav container styling <==*/
+
+/*header nav container items styling ==>*/
+
+.header-nav-icon-box-icon {
+  align-self: center;
+  justify-self: center;
+  fill: #a7b1ac;
+}
+/*header nav container items styling <==*/
+
+/*header hover effects ==>*/
+.header-nav-icon-box:hover {
+  cursor: pointer;
+  background-color: rgba(77, 79, 80, 0.5);
+  transition: var(
+    --transition-normal
+  ); /*also adding transition for animationa effects <==*/
+}
+
+/*** header nav ***/
+
+/*** header user sec***/
+
+/*header mani  conainer ==>*/
+.header-user-container {
+  width: 200px;
+  margin-right: -10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 850px) {
+  .header-user-container {
+    margin-right: 0px;
+  }
+}
+/*header main  conainer <==*/
+
+/*header container styles ==>*/
+
+.header-user-containerBox {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgb(58, 59, 60);
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  margin-right: 3px;
+}
+
+/*header container styles <==*/
+
+.header-user-containerBox-icon {
+  -webkit-filter: invert(89%) sepia(6%) hue-rotate(185deg);
+}
+/*** header user sec***/
+
+/*header user sec user img ==>*/
+
+.header-user-containerBoxImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/*header user sec user img <==*/
+
+/*header additional classes ==>*/
+
+.activeIcon {
+  fill: #2374e1; /*changin color of active icon*/
+}
+
+/*header additional classses <==*/
+
+/***^^ making header responsive***/
+
+@media only screen and (max-width: 1230px) {
+  .header-nav-container {
+    margin-right: 0px;
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .header-nav-container {
+    margin-right: 138px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .header-nav-container {
+    margin-right: 80px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .header-nav-container {
+    margin-right: 60px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .header-nav-container {
+    display: none;
+  }
+}
+/***^^ making header responsive***/
+/**** header ****/
